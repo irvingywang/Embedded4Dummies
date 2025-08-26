@@ -23,13 +23,13 @@ Both of these wires must be connected to a pull-up resistor to maintain a high v
 - **ACK(s)**: After each data frame, the receiving device (slave or master) pulls the SDA line low to acknowledge successful reception. If no ACK is sent, communication stops.
 - **Stop Condition**: The master ends the communication by pulling the SDA line high while the SCL line is high, signaling the release of the bus.
 
-![I2C Frame](https://www.analog.com/en/_/media/analog/en/landing-pages/technical-articles/i2c-primer-what-is-i2c-part-1-/36689.png?la=en&rev=800e587601a84cb28576fb870b2cdc8b)
+![I2C Frame](https://www.analog.com/en/_/media/analog/en/landing-pages/technical-articles/i2c-primer-what-is-i2c-part-1-/36689.png)
 
 
 ## Open-Drain Design
 The pull-up resistors on the SDA and SCL lines are essential for maintaining the high state of the bus when no device is actively pulling the lines low.
 
-![I2C Resistors](https://www.analog.com/en/_/media/analog/en/landing-pages/technical-articles/i2c-primer-what-is-i2c-part-1-/36684.png?la=en&h=300&rev=1fcb3b771f93448ba234bd5f9bebd6dc)
+![I2C Resistors](https://www.analog.com/en/_/media/analog/en/landing-pages/technical-articles/i2c-primer-what-is-i2c-part-1-/36684.png)
 
 The speed at which data can be transmitted is limited by the resistance of these resistors because they control how quickly the line returns to a high state after being pulled low.
 - Higher resistance makes it easier to pull the line high but slows down the rise time, limiting the maximum data rate.
